@@ -1,7 +1,8 @@
-package composite;
+package structural_patterns.composite;
 
 public class Client {
     public static void main(String[] args) throws Exception {
+        //? Dúvida: Não conseguimos isolar o client de Utilizar tanto o Product como o Component
         Box greaterBox = new Box();
         Box mediumBox = new Box();
         Box smallBox = new Box();

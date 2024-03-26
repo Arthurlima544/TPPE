@@ -1,4 +1,4 @@
-package composite;
+package structural_patterns.composite;
 public class Product implements Component{
 
     public String name;

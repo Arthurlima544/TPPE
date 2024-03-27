@@ -1,4 +1,4 @@
-package structural_patterns.adapter;
+package structural_patterns.adapter.object;
 
 public class Adapter implements ClientInteface {
     private Service adaptee;

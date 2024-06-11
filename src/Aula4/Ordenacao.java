@@ -1,7 +1,5 @@
 package Aula4;
 
-import java.util.List;
-
 public class Ordenacao {
     private Numero[] numeros;
     
@@ -28,7 +26,10 @@ public class Ordenacao {
         return this.numeros;
     }
 
-    public Numero[] inserir(int integer){
+    public Numero[] inserir(int integer) throws ElementoDuplicadoException{
+        if(pesquisar(integer)){
+            throw new ElementoDuplicadoException(integer);
+        }
         Numero n = Numero.getInstance(integer);
         Numero[] temp = new Numero[ numeros.length +1 ];
         for(int i = 0; i< numeros.length  ;  i++){
@@ -37,6 +38,17 @@ public class Ordenacao {
         temp[numeros.length] = n;
         numeros = temp;
         return temp;
+    }
+
+
+
+    public boolean pesquisar(int integer) {
+        for (Numero n: numeros) {
+            if(n.getNumero() == integer){
+                return true;
+            }
+        }
+        return false;
     }
 
 }

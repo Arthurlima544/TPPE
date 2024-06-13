@@ -11,7 +11,7 @@ public class Palindromo {
     public boolean ehPalindromo(){
         char[] str = sentenca.toCharArray();
         for(int i=0; i< str.length / 2; i ++){
-            int compl = str.length - i- 1;
+            int compl = str.length - i - 1;
             if(str[i] != str[compl]){
                 return false;
             }
